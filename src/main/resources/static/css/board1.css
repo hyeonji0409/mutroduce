@@ -1,0 +1,291 @@
+@charset "UTF-8";
+.searchcontainer{
+	width:360px;
+	margin-left:730px;
+	margin-bottom:-36px;
+}
+
+
+.writeinput {
+  width: 500px;
+  height: 40px;
+  font-size: 15px;
+  border: 0;
+  border-radius: 15px;
+  outline: none;
+  padding-left: 10px;
+  background-color: rgb(233, 233, 233);
+}
+
+#wrap{
+	background:white;
+}
+.writeinputbody {
+  width: 500px;
+  height: 570px;
+  font-size: 15px;
+  border: 0;
+  border-radius: 15px;
+  outline: none;
+  padding-left: 10px;
+  background-color: rgb(233, 233, 233);
+}
+
+.replybtn {
+    background-color: #5fb7d1; 
+    border: none;
+    color: white;
+    padding: 1px 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 1px;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.replybtn {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #5fb7d1;
+}
+
+.listbtn {
+	background-color: #5fb7d1; 
+    border: none;
+    color: white;
+    padding: 9px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    cursor: pointer;
+    margin-left:500px;
+    margin-top:20px;
+}
+
+.listbtn {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #5fb7d1;
+}
+
+
+.btn {
+    background-color: #5fb7d1; 
+    border: none;
+    color: white;
+    padding: 4px 9px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.btn {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #5fb7d1;
+}
+
+.btn:hover {
+    background-color: #5fb7d1;
+    color: white;
+}
+
+.replybtn:hover {
+    background-color: #5fb7d1;
+    color: white;
+}
+
+.listbtn:hover {
+    background-color: #5fb7d1;
+    color: white;
+}
+
+#searchbtn{
+	width:50px;
+}
+
+.writeBtn {
+    background-color: #5fb7d1; 
+    border: none;
+    color: white;
+    padding: 9px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    cursor: pointer;
+    height:40px;
+}
+.writeBtn {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #5fb7d1;
+    
+}
+
+#writeBtn {
+    height:40px;
+    margin-bottom:45px;    
+}
+
+
+.writeBtn:hover {
+    background-color: #5fb7d1;
+    color: white;
+}
+
+
+
+.boardcontainer{
+	width: 1080px;
+	margin-top:60px;
+	margin-left:-5px;
+	margin-bottom: 150px
+}
+
+.board{
+	width: 1090px;
+}
+.viewcontainer{
+	width: 1080px;
+	margin-top:60px;
+	margin-left:18px;
+	margin-bottom:120px
+}
+
+.writecontainer{
+	width: 1080px;
+	margin-top:60px;
+	margin-left:-5px;
+	height: 980px;
+	
+}
+.boardform{
+	text-align:center;
+}
+
+
+#writeBtn{
+	text-align:right;
+}
+
+a{
+	text-decoration:none;
+}
+
+
+
+
+.pull-right{
+	border:none;
+}
+
+#deletebtn{
+	color:red;
+}
+
+.row{
+	width:1050px
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.menu .hide {
+  display: none;
+}
+
+.hide {
+  list-style: none;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+  
+
+
+.board h2{
+	text-align:left;
+}
+
+
+#boardmenu{
+	text-align:left; 
+}
+
+.replyinput{
+	width: 200px;
+    height: 25px;
+    padding: 0 19px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+    outline: none;
+    margin:5px;
+    margin-left:45px;
+}
+
+.replymaininput{
+	width: 200px;
+    height: 25px;
+    padding: 0 19px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+    outline: none;
+    margin:5px;
+    margin-bottom:40px;
+}
+

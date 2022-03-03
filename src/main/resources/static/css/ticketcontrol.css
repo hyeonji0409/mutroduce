@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+
+.form {
+	margin-left : 50px;
+}
+.table {
+	    width: 70%;
+    max-width: 100%;
+    margin-bottom: 2px;
+}
+#review {
+	width : 600px;
+	height : 200px;
+	
+}

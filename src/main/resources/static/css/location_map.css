@@ -1,0 +1,83 @@
+/* index 지도부분 css */
+
+.OUTLINE {
+    stroke-linejoin:round;
+    stroke: #ffffff;
+    stroke-width: 2;
+}
+
+/*서울*/
+#CD11:hover {
+    fill: #f1c40f;
+}
+/*부산*/
+#CD26:hover {
+    fill: #16a085;
+}
+/*대구*/
+#CD27:hover {
+    fill: #f39c12;
+}
+/*인천*/
+#CD28:hover {
+    fill: #2ecc71;
+}
+/*광주*/
+#CD29:hover {
+    fill: #e67e22;
+}
+/*대전*/
+#CD30:hover {
+    fill: #27ae60;
+}
+/*울산*/
+#CD31:hover {
+    fill: #d35400;
+}
+/*세종특별자치시*/
+#CD36:hover {
+    fill: #3498db;
+}
+/*경기도*/
+#CD41:hover {
+    fill: #e74c3c;
+}
+/*강원도*/
+#CD42:hover {
+    fill: #2980b9;
+}
+/*충청북도*/
+#CD43:hover {
+    fill: #c0392b;
+}
+/*충청남도*/
+#CD44:hover {
+    fill: #9b59b6;
+}
+/*전라북도*/
+#CD45:hover {
+    fill: #8e44ad;
+}
+/*전라남도*/
+#CD46:hover {
+    fill: #34495e;
+}
+/*경상북도*/
+#CD47:hover {
+    fill: #2c3e50;
+}
+/*경상남도*/
+#CD48:hover {
+    fill: #1abc9c;
+}
+/*제주도 (현재는 구현하지 않음)*/
+#CD50:hover {
+    fill: #f1c40f;
+}
+.TEXT {
+    fill: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    text-anchor: middle;
+    alignment-baseline: middle;
+}

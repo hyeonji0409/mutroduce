@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+ <mapper namespace="com.project.board.dao.IBoardDAO3">
+    <select id="getBoard3" resultType="com.project.board.model.BoardVO">
+        SELECT
+        idx, title, image, contents,hits,writedate,memId
+        FROM
+        board3
+        ORDER BY idx asc 
+        <!-- LIMIT 0, 10 -->
+      
+
+
+    </select>
+    
+    <select id="getBoardListCnt3" resultType="int">
+
+		SELECT
+			count(*) as listCnt
+		FROM
+			information_board
+	</select>
+
+    
+    <insert id="addBoard3">
+        INSERT INTO 
+        board3
+        (
+        title,
+        memId,
+        image,
+        contents
+        )
+        VALUES
+        (
+        #{title},
+        #{memId},
+        #{image},
+        #{contents}
+        )
+    </insert>
+    
+    <select id="getBoardOne3" resultType="com.project.board.model.BoardVO">
+        SELECT
+        idx, title, image, contents
+        FROM
+        board3
+        WHERE
+        idx = #{idx}
+    </select>
+    
+    <insert id="addReply3">
+        INSERT INTO 
+        reply3
+        (
+        board_idx,
+        reply_idx,
+        memId,
+        contents
+        )
+        VALUES
+        (
+        #{boardIdx},
+        #{replyIdx},
+        #{memId},
+        #{contents}
+        )
+    </insert>
+    
+    <select id="getReply3" resultType="com.project.board.model.ReplyVO">
+        SELECT
+        idx, board_idx as boardIdx, reply_idx as replyIdx, contents
+        FROM
+        reply3
+        WHERE
+        board_idx = #{boardIdx}
+        order by reply_idx asc
+    </select>
+    
+    
+    <update id="updatereviewcnt3">
+		update board3 set hits = hits + 1 where idx = #{idx}
+	</update>
+	
+	<select id="detailViewBoard3" parameterType="int" resultType="com.project.board.model.BoardVO">
+		SELECT * FROM board3 WHERE idx=#{idx}
+	</select>
+	
+	<!-- 상품 정보 삭제  -->
+  	<delete id="deleteBoard3"  parameterType="String">
+  		DELETE FROM board3 WHERE idx = #{idx}
+  	</delete>
+  	
+  	<!-- 댓글삭제 -->	
+  	<delete id="deleteReply3"  parameterType="String"  >
+  		DELETE FROM reply3 WHERE idx = #{board_idx}
+  	</delete>	
+	
+	<!-- 상품 정보 수정 : 수정된 정보 DB에 저장(상품 번호는 수정하지 않음) -->
+	<update id="updateBoard3" parameterType="com.project.board.model.BoardVO">
+		UPDATE board3 SET contents = #{contents}, 
+						image = #{image}, title = #{title}
+		WHERE idx = #{idx}
+	</update>
+	
+	
+</mapper>
+  
+  

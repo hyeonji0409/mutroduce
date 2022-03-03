@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+ <mapper namespace="com.project.board.dao.IBoardDAO2">
+    <select id="getBoard2" resultType="com.project.board.model.BoardVO">
+        SELECT
+        idx, title, image, contents,hits,writedate, memId
+        FROM
+        information_board
+        ORDER BY idx asc 
+        <!-- LIMIT 0, 10 -->
+      
+
+
+    </select>
+    
+    <select id="getBoardListCnt2" resultType="int">
+
+		SELECT
+			count(*) as listCnt
+		FROM
+			information_board
+	</select>
+
+    
+    <insert id="addBoard2" parameterType="com.project.board.model.BoardVO">
+        INSERT INTO 
+        information_board
+        (
+        memId,
+        title,
+        image,
+        contents
+        )
+        VALUES
+        (
+        #{memId},
+        #{title},
+        #{image},
+        #{contents}
+        )
+    </insert>
+    
+    <select id="getBoardOne2" resultType="com.project.board.model.BoardVO">
+        SELECT
+        idx, title, image, contents
+        FROM
+        information_board
+        WHERE
+        idx = #{idx}
+    </select>
+    
+    <insert id="addReply2">
+        INSERT INTO 
+        information_reply
+        (
+        board_idx,
+        reply_idx,
+        contents
+        )
+        VALUES
+        (
+        #{boardIdx},
+        #{replyIdx},
+        #{contents}
+        )
+    </insert>
+    
+    <select id="getReply2" resultType="com.project.board.model.ReplyVO">
+        SELECT
+        idx, board_idx as boardIdx, reply_idx as replyIdx, contents
+        FROM
+        information_reply
+        WHERE
+        board_idx = #{boardIdx}
+        order by reply_idx asc
+    </select>
+    
+    
+    <update id="updatereviewcnt2">
+		update information_board set hits = hits + 1 where idx = #{idx}
+	</update>
+	
+	<select id="detailViewBoard2" parameterType="int" resultType="com.project.board.model.BoardVO">
+		SELECT * FROM information_board WHERE idx=#{idx}
+	</select>
+	
+	<!-- 상품 정보 삭제  -->
+  	<delete id="deleteBoard2"  parameterType="String">
+  		DELETE FROM information_board WHERE idx = #{idx}
+  	</delete>
+  	
+  	<!-- 댓글삭제 -->	
+  	<delete id="deleteReply2"  parameterType="String"  >
+  		DELETE FROM information_reply WHERE idx = #{board_idx}
+  	</delete>	
+	
+	<!-- 상품 정보 수정 : 수정된 정보 DB에 저장(상품 번호는 수정하지 않음) -->
+	<update id="updateBoard2" parameterType="com.project.board.model.BoardVO">
+		UPDATE information_board SET contents = #{contents}, 
+						image = #{image}, title = #{title}
+		WHERE idx = #{idx}
+	</update>
+	
+	
+</mapper>
+  
+  

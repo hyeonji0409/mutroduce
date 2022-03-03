@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="com.project.board.dao.IHallDAO">
+
+	<resultMap id="HallResult" type="com.project.board.model.HallVO">
+			<result property="no" column="no"/>
+			<result property="name" column="name"/>
+			<result property="area" column="area"/>
+			<result property="location" column="location"/>
+			<result property="seat" column="seat"/>
+			<result property="details" column="details"/>
+			<result property="con" column="con"/>
+			<result property="cus" column="cus"/>
+			
+	</resultMap>
+	
+	<!--  전체 홀 조회  -->
+	<select id="listAllHall" resultMap="HallResult" resultType="com.project.board.model.HallVO">
+			SELECT * FROM theater 
+	</select>
+	<!--  디테일페이지 -->
+	<select id="detailViewhall" resultMap="HallResult" resultType="com.project.board.model.HallVO">
+		SELECT * FROM theater WHERE no=#{no}
+	</select>
+	
+	<select id="listHallByArea" resultMap="HallResult" resultType="com.project.board.model.HallVO">
+		SELECT * FROM theater WHERE area=#{area}
+	</select>
+	
+	<insert id="inserthall" parameterType="com.project.board.model.HallVO">
+		INSERT INTO theater (no, name, area, location, seat, details, con, cus) VALUES(#{no}, #{name}, #{area}
+		, #{location}, #{seat}, #{details}, #{con}, #{cus})
+	</insert>
+	
+	<update id="updatehall" parameterType="com.project.board.model.HallVO">
+		UPDATE theater SET no = #{no}, name = #{name}, area = #{area}, location = #{location}, seat = #{seat}
+		, details = #{details}, con = #{con}, cus = #{cus} WHERE no=#{no}
+	</update>
+	
+	<delete id="deletehall" parameterType="com.project.board.model.HallVO">
+ 		DELETE FROM theater WHERE no = #{no} or name=#{name}
+ 	</delete>
+
+</mapper>

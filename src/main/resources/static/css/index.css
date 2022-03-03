@@ -1,0 +1,310 @@
+@charset "utf-8";
+
+.bannerTitle{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.bannerTitle_1{
+    letter-spacing: 0.05em;
+    font-size: 20px;
+    font-family: GowunDodum-Regular, serif;
+    padding: 5px;
+}
+
+.bannerTitle_2{
+    font-size: 47px;
+    font-family: Hahmlet-Bold, serif;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.bannerMenu{
+    color: #234E70;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.bannerMenu h2{
+    color: black;
+    padding-top: 5px;
+}
+
+.bannerPoster img{
+    width: 150px;
+    height: 200px;
+}
+
+.bannerPosterTitle{
+    margin-top: 10px;
+}
+
+#bannerViewItem{
+    display: flex;
+    justify-content: center;
+}
+
+.bannerContent{
+    padding: 18px;
+}
+
+.mainBanner{
+    position: relative;
+}
+
+#bannerName{
+    text-align: right;
+    padding-right: 100px;
+    height: 20px;
+}
+
+/*second Section(인덱스 페이지 파란 배경)*/
+.sectionBackground{
+    background-color: #021726;
+    position: absolute;
+    z-index: 1;
+    width: 1200px;
+    top: 920px;
+    padding-top: 50px;
+    padding-bottom: 130px;
+}
+
+.linkedSection{
+    height: 860px;
+}
+
+.secondSection{
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.linkAbout{
+    margin-top: 100px;
+    text-align: center;
+    font-size: 55px;
+    color: #FFFFFF;
+    text-space: 1em;
+    font-family: Hahmlet-Bold, serif;
+}
+
+/* button Design */
+.buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    /*   padding: 2em 0em; */
+}
+
+.buttonContent {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    /* background-color: #FFF; */
+    /* padding: 40px 0px; */
+    width: 240px;
+    margin-top: 40px;
+}
+
+h1 {
+    text-align: left;
+    color: #444;
+    letter-spacing: 0.05em;
+    margin: 0 0 0.4em;
+    font-size: 1em;
+}
+
+p {
+    text-align: left;
+    color: #444;
+    letter-spacing: 0.05em;
+    font-size: 0.8em;
+    margin: 0 0 2em;
+}
+
+
+.btn {
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 45px;
+    max-width: 160px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100%;
+}
+.btn:hover {
+    text-decoration: none;
+}
+
+/*btn_background*/
+.effect04 {
+    --uismLinkDisplay: var(--smLinkDisplay, inline-flex);
+    display: var(--uismLinkDisplay);
+    color: #fff;
+    outline: solid 2px #000;
+    position: relative;
+    transition-duration: 0.4s;
+    overflow: hidden;
+    /* background: #fff; */
+    border: 2px solid #fff;
+}
+
+.effect04::before,
+.effect04 span{
+    margin: 0 auto;
+    transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+    transition-duration: 0.4s;
+}
+
+.effect04:hover{
+
+    background-color: #000;
+}
+
+/* HOVER */
+.effect04:hover span{
+    -webkit-transform: translateY(-400%) scale(-0.1,20);
+    transform: translateY(-400%) scale(-0.1,20);
+}
+
+.effect04::before{
+    content: attr(data-sm-link-text);
+    color: #FFF;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    -webkit-transform: translateY(500%) scale(-0.1,20);
+    transform: translateY(500%) scale(-0.1,20);
+}
+
+/* HOVER */
+.effect04:hover::before{
+    letter-spacing: 0.05em;
+    -webkit-transform: translateY(0) scale(1,1);
+    transform: translateY(0) scale(1,1);
+}
+
+
+.RecoName{
+    text-align: left;
+    padding-left: 15px;
+    margin-top: 3px;
+    /*color: #FBF8BE;*/
+}
+
+.RecogNumberItem{
+    position: relative;
+    display: flex;
+}
+
+.RecogMain{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.RecogMainMenu{
+    position: relative;
+}
+
+.RecogSub{
+    position: relative;
+    display: inline-block;
+    width: 200px;
+}
+
+.RecogSubMenu{
+    position: relative;
+    display: block;
+    height: calc(97% /3);
+    padding: 2.5px;
+}
+
+.RecoNumber{
+    width: 660px;
+    height: 400px;
+    position: relative;
+    display: inline-block;
+    /*background-color: #234E70;*/
+    border-radius: 10px;
+    padding-right: 7px;
+}
+
+.calendar{
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 5px;
+    padding-left: 5px;
+    padding-bottom: 10px;
+    /*background-color: #FFFFFF;*/
+    border-radius: 10px;
+}
+
+#calendar {
+    width: 800px;
+    /*background-color: #FFFFFF;*/
+}
+
+#calendar button{
+    background-color: black;
+}
+
+
+.fc-today-button .fc-button .fc-button-primary {
+    /* background: black; */
+    opacity: 1;
+}
+
+.lastSection{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.showMap{
+    width: 330px;
+    display: inline-block;
+    /*background-color: #deeefc;*/
+    border-radius: 10px;
+}
+
+.localHotChoice{
+    width: 700px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    /*background-color: #faece2;*/
+    border-radius: 10px;
+}
+
+.localPoster img{
+    width: 123px;
+}
+.localHotChoice .bannerContent{
+    padding-right: 20px;
+    padding-left: 30px;
+}
+
+.svg{
+    height: 450px;
+}
+

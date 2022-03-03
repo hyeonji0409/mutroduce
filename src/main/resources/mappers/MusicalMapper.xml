@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+ <mapper namespace="com.project.board.dao.IMusicalDAO">
+ 	<!-- 뮤지컬 상세 데이터 조회 -->
+    <select id="getMusical" resultType="com.project.board.model.MusicalVO" parameterType="string">
+        select * from musical m, genre g where m.muscGenre = g.genreNo and m.muscNo = #{muscNo}
+    </select>
+    
+    <select id="getMusicalListByGenre" resultType="com.project.board.model.MusicalVO" parameterType="string">
+        select * from musical m, genre g where g.genreNo = m.muscGenre AND g.genreNo = #{genreNo}
+    </select>
+    
+    <select id="getActorCast" resultType="com.project.board.model.ActorCastVO" parameterType="string">
+        SELECT a.actorName, a.actorProfile, c.roleName FROM actor a, muscCast c WHERE a.actorNo = c. actorNo AND c.muscNo= #{muscNo}
+    </select>
+    <select id="getAllMusical" resultType="com.project.board.model.MusicalVO" parameterType="string">
+        select * from musical order by musicalVote desc
+    </select>
+
+    <update id="voteUp" parameterType="com.project.board.model.MusicalVO">
+        UPDATE musical SET musicalVote = musicalVote + 1
+        WHERE muscNo = #{muscNo}
+    </update>
+    
+    <insert id="insertMusical"  parameterType="com.project.board.model.MusicalVO">
+  		INSERT INTO musical
+  		VALUES (#{muscNo}, #{muscName}, #{muscHashtag}, #{muscPlace},
+				#{muscPlaceLink},#{muscStartDate}, #{muscEndDate}, #{muscQuote},
+                #{muscReqTime}, #{muscSynop}, #{muscGenre}, #{muscImg},
+                #{muscInfo_1}, #{muscInfo_2}, #{muscInfo_3}, #{muscYoutube})
+  	</insert> 
+
+</mapper>
+  
+  

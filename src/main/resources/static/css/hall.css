@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+body {
+	width : 1080px;
+	margin-left : auto;
+	margin-right : auto;
+	
+}
+#공연장 { 
+	margin-left : auto;
+	margin-right : auto;
+	width : 80%; 
+	margin-top : 50px;
+	margin-bottom : 50px;
+	color : black;
+	border-radius: 15px 15px 15px 15px; 
+	border: 2px solid;
+	padding: 0.5em 0.6em; color: black;
+	font-family : monospace;
+	
+}
+
+.wrap {
+	margin-bottom : 50px;
+}
+#지역 { 
+	width: 116px;
+    text-align: left;
+    margin-left: 104px;
+    margin-bottom: 10px;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 15px 15px 15px 15px;
+    border: 2px solid;
+    padding: 0.5em 0.6em;
+    color: black;
+    text-align: center;
+}
+.hall {
+	text-align : center;
+	padding-top : 30px;
+	padding-top : 10px;
+	padding-bottom : 30px;
+	
+	padding: 0.43em 1em; 
+	font-size: 19px; 
+	border-radius: 2px; 
+	color: #ffffff;
+}
+
+.list {
+	width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-bottom: 50px; */
+    color: black;
+    background-color: white;
+    border: 0px solid;
+    border-collapse: collapse;
+
+
+}
+.list-border {
+	width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    color: black;
+    background-color: white;
+    border: 5px solid;
+    border-radius: 10px;
+}
+
+.list tr th {
+	width : 20%;
+}
+.list tr th img {
+    width: 100%;
+    height: 50px;
+}

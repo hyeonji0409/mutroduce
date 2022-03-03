@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+ 
+<mapper namespace="com.project.board.dao.ITicketbookDAO">
+
+	<resultMap id="TicketbookResult" type="com.project.board.model.TicketbookVO">
+			<result property="no" column="no"/>
+			<result property="memID" column="memID"/>
+			<result property="subject" column="subject"/>
+			<result property="date" column="date"/>
+			<result property="time" column="time"/>
+			<result property="theater" column="theater"/>
+			<result property="seat" column="seat"/>
+			<result property="casting" column="casting"/>
+			<result property="price" column="price"/>
+			<result property="review" column="review"/>
+			
+	</resultMap>
+	
+
+	<select id="listAllTicketbook" resultMap="TicketbookResult" resultType="com.project.board.model.TicketbookVO">
+			SELECT * FROM tk
+	</select>
+	
+
+	<select id="getMusicalByGenre" resultType="com.project.board.model.MusicalByGenreVO" parameterType="string">
+        SELECT e.memId, e.genre, m.muscNo, m.muscGenre, m.muscImg FROM member e LEFT JOIN musical m ON e.genre = m.muscGenre WHERE e.memId = #{memId} limit 3
+    </select>
+	
+
+	<select id="listTicketByID" resultMap="TicketbookResult" resultType="com.project.board.model.TicketbookVO">
+		SELECT * FROM tk WHERE memID=#{memID}
+	</select>
+
+	
+	
+	<insert id="insertticket" parameterType="com.project.board.model.TicketbookVO">
+		INSERT INTO tk (memID, subject, date, time, theater, seat, casting, price, review) VALUES(#{memID}, #{subject}
+		, #{date}, #{time}, #{theater}, #{seat}, #{casting}, #{price}, #{review})
+	</insert>
+	
+	
+	<delete id="deleteticket" parameterType="com.project.board.model.TicketbookVO">
+ 		DELETE FROM theater WHERE no = #{no} or memID = #{memID}, subject = #{subject}, date = #{date}, time = #{time}, theater = #{theater}
+		, seat = #{seat}, casting = #{casting}, price = #{price}, review = #{review}
+ 	</delete>
+
+ </mapper> 
+
+
+

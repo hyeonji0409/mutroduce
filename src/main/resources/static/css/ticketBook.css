@@ -1,0 +1,55 @@
+/* ticketBook.css */
+
+.ticketBookMain{
+    margin-top: 20px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    height: 580px;
+}
+
+.MyPage{
+    border: 1px solid red;
+    width: 70%;
+    display: block;
+}
+
+.MyPageContent{
+    border: 1px solid green;
+    display: block;
+    height: 150px;
+}
+
+.userInfo{
+    border: 1px solid green;
+    display: flex;
+    justify-content: space-around;
+    height: 90px;
+}
+
+.user_ticket_Info{
+    border: 1px solid darkviolet;
+    display: flex;
+    justify-content: space-around;
+    height: 60px;
+}
+
+.ticketBook{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.ticketBookContent{
+    margin-top: 10px;
+}
+
+.ticketBookContent img{
+    height: 200px;
+    margin: 5px;
+}
+
+.RecogMusical{
+    border: 1px solid blue;
+    width: 30%;
+}

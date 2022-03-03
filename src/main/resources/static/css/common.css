@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    /*background-color: #FFFFFF;*/
+}
+
+#wrap{
+    text-align: center;
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#chatBtn{
+    position: fixed;
+    z-index: 999;
+    right: 170px;
+    bottom: 20px;
+}
+
+
+@font-face {
+    font-family: 'Hahmlet-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/Hahmlet-Bold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GowunDodum-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

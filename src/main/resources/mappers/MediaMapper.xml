@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd"><!---->
+  
+<mapper namespace="com.project.board.dao.IMediaDAO">
+    <resultMap id="mediaResult" type="com.project.board.model.MediaVO">
+        <result property="numNo" column="numNo" />
+        <result property="numTitle" column="numTitle" />
+        <result property="numURL" column="numURL" />
+        <result property="weather" column="weather" />
+    </resultMap>
+
+    <resultMap id="voteResult" type="com.project.board.model.VoteVO">
+        <result property="actorNo" column="actorNo" />
+        <result property="actorName" column="actorName" />
+        <result property="actorProfile" column="actorProfile" />
+        <result property="actorVote" column="actorVote" />
+    </resultMap>
+
+    <!-- 전체 넘버 조회 -->
+    <select id="listAllMedia" resultMap="mediaResult">
+        SELECT * FROM weathernumber ORDER BY RAND() LIMIT 50
+    </select>
+
+    <select id="listAllActor" resultMap="voteResult">
+        SELECT * FROM actor ORDER BY actorVote DESC
+    </select>
+
+    <select id="detailActor"  parameterType="string" resultType="com.project.board.model.VoteVO">
+        SELECT * FROM actor WHERE actorNo = #{actorNo}
+    </select>
+
+    <update id="voteUp">
+        UPDATE actor SET actorVote = actorVote + 1
+        WHERE actorNo = #{actorNo}
+    </update>
+
+
+</mapper>
+  
+  
